@@ -1,1 +1,0 @@
-{"id":"1e9544f1-4587-4b67-8aa8-e6d8532c28df","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"HelloProject.ThrowCatchEvents","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

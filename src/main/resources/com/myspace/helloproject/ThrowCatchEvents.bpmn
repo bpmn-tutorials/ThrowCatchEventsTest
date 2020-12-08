@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_-hqZcDlWEeuBo5GRj4Huig" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_EJ4mMDlXEeuBo5GRj4Huig" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_timerDataItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_linkThrowItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_linkCatchItem" structureRef="Object"/>
@@ -29,7 +29,7 @@
   <bpmn2:error id="ErrorName" errorCode="ErrorName"/>
   <bpmn2:signal id="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29" name="signaled"/>
   <bpmn2:signal id="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29" name="signaled"/>
-  <bpmn2:error id="_B18DFF73-FE57-4867-B3FB-3CFE0B131B87"/>
+  <bpmn2:error id="_E36267DB-933D-4D38-AC19-032F1EFC4FCE"/>
   <bpmn2:process id="HelloProject.ThrowCatchEvents" drools:packageName="com.myspace.helloproject" drools:version="1.0" drools:adHoc="false" name="ThrowCatchEvents" isExecutable="true" processType="Public">
     <bpmn2:property id="timerData" itemSubjectRef="_timerDataItem" name="timerData"/>
     <bpmn2:property id="linkThrow" itemSubjectRef="_linkThrowItem" name="linkThrow"/>
@@ -38,7 +38,7 @@
     <bpmn2:property id="signalThrow" itemSubjectRef="_signalThrowItem" name="signalThrow"/>
     <bpmn2:property id="errorThrow" itemSubjectRef="_errorThrowItem" name="errorThrow"/>
     <bpmn2:property id="errorCatch" itemSubjectRef="_errorCatchItem" name="errorCatch"/>
-    <bpmn2:laneSet id="_-hqZcTlWEeuBo5GRj4Huig">
+    <bpmn2:laneSet id="_EJ4mMTlXEeuBo5GRj4Huig">
       <bpmn2:lane id="_21AAB98B-3C12-4A69-B80C-8750724F4972" name="Error Event Test">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
@@ -165,7 +165,7 @@
     <bpmn2:sequenceFlow id="_5A034DFD-4A18-494B-A41C-51ADF06CCF59" sourceRef="_EC21BA94-B00C-456C-A5F7-3222E4358D8F" targetRef="_6F18284D-664B-43B0-A12C-E5AFB1FF0D6E"/>
     <bpmn2:endEvent id="_CC789E8D-D0B4-43BC-B611-88D19D7A1D36">
       <bpmn2:incoming>_FB478EE8-A20A-40FB-9CC4-4D8120A6361F</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_-hqZcjlWEeuBo5GRj4Huig"/>
+      <bpmn2:terminateEventDefinition id="_EJ4mMjlXEeuBo5GRj4Huig"/>
     </bpmn2:endEvent>
     <bpmn2:scriptTask id="_92C1554A-9255-4CAD-9572-6CB23E7961E3" name="Print Link Output String" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -175,8 +175,8 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_E892520A-F9E0-4ACF-9EF0-8C8E906FC9F8</bpmn2:incoming>
       <bpmn2:outgoing>_F3823978-BA6F-4CD5-A2CF-A8E0A4393EAC</bpmn2:outgoing>
-      <bpmn2:script><![CDATA[System.out.println(linkOutput.getClass().toString());
-System.out.println(linkOutput.toString());]]></bpmn2:script>
+      <bpmn2:script><![CDATA[System.out.println(linkCatch.getClass().toString());
+System.out.println(linkCatch.toString());]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:scriptTask id="_EC21BA94-B00C-456C-A5F7-3222E4358D8F" name="Print Timer Data" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -202,7 +202,7 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:endEvent id="_525F1F81-280F-44C3-8F0C-1A78E846E8B3">
       <bpmn2:incoming>_5F5A8320-824E-44C5-8757-74FEEBB6F57C</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_-hqZczlWEeuBo5GRj4Huig"/>
+      <bpmn2:terminateEventDefinition id="_EJ4mMzlXEeuBo5GRj4Huig"/>
     </bpmn2:endEvent>
     <bpmn2:startEvent id="_F56A084B-9669-455C-B600-130FFF1CB471">
       <bpmn2:outgoing>_01D6D7ED-C4C1-4AD8-8ED9-7E9CBA7DE1AF</bpmn2:outgoing>
@@ -218,15 +218,15 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_E892520A-F9E0-4ACF-9EF0-8C8E906FC9F8</bpmn2:outgoing>
       <bpmn2:dataOutput id="_CB56FAC8-564C-4320-8B21-E95423C9A0F3_linkOutputX" drools:dtype="String" itemSubjectRef="__CB56FAC8-564C-4320-8B21-E95423C9A0F3_linkOutputXItem" name="link"/>
-      <bpmn2:dataOutputAssociation id="_-hqZdTlWEeuBo5GRj4Huig">
+      <bpmn2:dataOutputAssociation id="_EJ4mNTlXEeuBo5GRj4Huig">
         <bpmn2:sourceRef>_CB56FAC8-564C-4320-8B21-E95423C9A0F3_linkOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>linkCatch</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet id="_-hqZdDlWEeuBo5GRj4Huig">
+      <bpmn2:outputSet id="_EJ4mNDlXEeuBo5GRj4Huig">
         <bpmn2:dataOutputRefs>_CB56FAC8-564C-4320-8B21-E95423C9A0F3_linkOutputX</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:linkEventDefinition id="_-hqZdjlWEeuBo5GRj4Huig" name="shortcut">
-        <bpmn2:source>_-hqZdzlWEeuBo5GRj4Huig</bpmn2:source>
+      <bpmn2:linkEventDefinition id="_EJ4mNjlXEeuBo5GRj4Huig" name="shortcut">
+        <bpmn2:source>_EJ4mNzlXEeuBo5GRj4Huig</bpmn2:source>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:userTask id="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF" name="Task">
@@ -237,32 +237,32 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_01D6D7ED-C4C1-4AD8-8ED9-7E9CBA7DE1AF</bpmn2:incoming>
       <bpmn2:outgoing>_FB478EE8-A20A-40FB-9CC4-4D8120A6361F</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_-hqZeDlWEeuBo5GRj4Huig">
+      <bpmn2:ioSpecification id="_EJ4mODlXEeuBo5GRj4Huig">
         <bpmn2:dataInput id="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputX" drools:dtype="Object" itemSubjectRef="__A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputX" drools:dtype="Object" itemSubjectRef="__A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputXItem" name="Skippable"/>
-        <bpmn2:inputSet id="_-hqZeTlWEeuBo5GRj4Huig">
+        <bpmn2:inputSet id="_EJ4mOTlXEeuBo5GRj4Huig">
           <bpmn2:dataInputRefs>_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_-hqZejlWEeuBo5GRj4Huig"/>
+        <bpmn2:outputSet id="_EJ4mOjlXEeuBo5GRj4Huig"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_-hqZezlWEeuBo5GRj4Huig">
+      <bpmn2:dataInputAssociation id="_EJ4mOzlXEeuBo5GRj4Huig">
         <bpmn2:targetRef>_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_-hqZfDlWEeuBo5GRj4Huig">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_-hqZfTlWEeuBo5GRj4Huig"><![CDATA[Task]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_-hqZfjlWEeuBo5GRj4Huig">_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_EJ4mPDlXEeuBo5GRj4Huig">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EJ4mPTlXEeuBo5GRj4Huig"><![CDATA[Task]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EJ4mPjlXEeuBo5GRj4Huig">_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_-hqZfzlWEeuBo5GRj4Huig">
+      <bpmn2:dataInputAssociation id="_EJ4mPzlXEeuBo5GRj4Huig">
         <bpmn2:targetRef>_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_-hqZgDlWEeuBo5GRj4Huig">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_-hqZgTlWEeuBo5GRj4Huig"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_-hqZgjlWEeuBo5GRj4Huig">_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_EJ4mQDlXEeuBo5GRj4Huig">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_EJ4mQTlXEeuBo5GRj4Huig"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_EJ4mQjlXEeuBo5GRj4Huig">_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_deb652b5-d922-41c2-96c8-0281f7eef09d">
-        <bpmn2:resourceAssignmentExpression id="_-hqZgzlWEeuBo5GRj4Huig">
-          <bpmn2:formalExpression id="_-hqZhDlWEeuBo5GRj4Huig">testadmin</bpmn2:formalExpression>
+      <bpmn2:potentialOwner id="_7f4fda33-a509-4a38-9aff-32ec01e9ade3">
+        <bpmn2:resourceAssignmentExpression id="_EJ4mQzlXEeuBo5GRj4Huig">
+          <bpmn2:formalExpression id="_EJ4mRDlXEeuBo5GRj4Huig">testadmin</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
     </bpmn2:userTask>
@@ -270,14 +270,14 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
       <bpmn2:incoming>_F3823978-BA6F-4CD5-A2CF-A8E0A4393EAC</bpmn2:incoming>
       <bpmn2:outgoing>_53EEAC2A-915C-4563-8AC1-2B27A08E2096</bpmn2:outgoing>
       <bpmn2:dataInput id="_9417EE53-A7B9-44E3-BC76-B75EC1E54CDD_throwSignalInputX" drools:dtype="String" itemSubjectRef="__9417EE53-A7B9-44E3-BC76-B75EC1E54CDD_throwSignalInputXItem" name="throwSignal"/>
-      <bpmn2:dataInputAssociation id="_-hqZhjlWEeuBo5GRj4Huig">
+      <bpmn2:dataInputAssociation id="_EJ4mRjlXEeuBo5GRj4Huig">
         <bpmn2:sourceRef>signalThrow</bpmn2:sourceRef>
         <bpmn2:targetRef>_9417EE53-A7B9-44E3-BC76-B75EC1E54CDD_throwSignalInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:inputSet id="_-hqZhTlWEeuBo5GRj4Huig">
+      <bpmn2:inputSet id="_EJ4mRTlXEeuBo5GRj4Huig">
         <bpmn2:dataInputRefs>_9417EE53-A7B9-44E3-BC76-B75EC1E54CDD_throwSignalInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:signalEventDefinition id="_-hqZhzlWEeuBo5GRj4Huig" signalRef="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29"/>
+      <bpmn2:signalEventDefinition id="_EJ4mRzlXEeuBo5GRj4Huig" signalRef="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_6F18284D-664B-43B0-A12C-E5AFB1FF0D6E" name="shortcut">
       <bpmn2:extensionElements>
@@ -287,15 +287,15 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_5A034DFD-4A18-494B-A41C-51ADF06CCF59</bpmn2:incoming>
       <bpmn2:dataInput id="_6F18284D-664B-43B0-A12C-E5AFB1FF0D6E_linkInputX" drools:dtype="String" itemSubjectRef="__6F18284D-664B-43B0-A12C-E5AFB1FF0D6E_linkInputXItem" name="link"/>
-      <bpmn2:dataInputAssociation id="_-hqZiTlWEeuBo5GRj4Huig">
+      <bpmn2:dataInputAssociation id="_EJ4mSTlXEeuBo5GRj4Huig">
         <bpmn2:sourceRef>linkThrow</bpmn2:sourceRef>
         <bpmn2:targetRef>_6F18284D-664B-43B0-A12C-E5AFB1FF0D6E_linkInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:inputSet id="_-hqZiDlWEeuBo5GRj4Huig">
+      <bpmn2:inputSet id="_EJ4mSDlXEeuBo5GRj4Huig">
         <bpmn2:dataInputRefs>_6F18284D-664B-43B0-A12C-E5AFB1FF0D6E_linkInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:linkEventDefinition id="_-hqZdzlWEeuBo5GRj4Huig" name="shortcut">
-        <bpmn2:target>_-hqZdjlWEeuBo5GRj4Huig</bpmn2:target>
+      <bpmn2:linkEventDefinition id="_EJ4mNzlXEeuBo5GRj4Huig" name="shortcut">
+        <bpmn2:target>_EJ4mNjlXEeuBo5GRj4Huig</bpmn2:target>
       </bpmn2:linkEventDefinition>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:subProcess id="_4636B639-646F-4D7E-B4BE-9A0C347F53C2" name="Event Sub-process" triggeredByEvent="true">
@@ -327,14 +327,14 @@ System.out.println(errorCatch.toString());]]></bpmn2:script>
       <bpmn2:startEvent id="_04300971-B3D8-4133-B36E-956520359470" isInterrupting="false">
         <bpmn2:outgoing>_B13B0810-788A-430C-966E-FB9C29C4B2AE</bpmn2:outgoing>
         <bpmn2:dataOutput id="_04300971-B3D8-4133-B36E-956520359470_catchStringOutputX" drools:dtype="String" itemSubjectRef="__04300971-B3D8-4133-B36E-956520359470_catchStringOutputXItem" name="catchString"/>
-        <bpmn2:dataOutputAssociation id="_-hqZizlWEeuBo5GRj4Huig">
+        <bpmn2:dataOutputAssociation id="_EJ4mSzlXEeuBo5GRj4Huig">
           <bpmn2:sourceRef>_04300971-B3D8-4133-B36E-956520359470_catchStringOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>linkCatch</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:outputSet id="_-hqZijlWEeuBo5GRj4Huig">
+        <bpmn2:outputSet id="_EJ4mSjlXEeuBo5GRj4Huig">
           <bpmn2:dataOutputRefs>_04300971-B3D8-4133-B36E-956520359470_catchStringOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
-        <bpmn2:signalEventDefinition id="_-hqZjDlWEeuBo5GRj4Huig" signalRef="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29"/>
+        <bpmn2:signalEventDefinition id="_EJ4mTDlXEeuBo5GRj4Huig" signalRef="_2936db65-da2d-3e6b-b2dc-8eeef23b5c29"/>
       </bpmn2:startEvent>
       <bpmn2:scriptTask id="_486157DD-C556-4306-94F4-CFA2066D3B7F" name="Print Signal Catch String" scriptFormat="http://www.java.com/java">
         <bpmn2:extensionElements>
@@ -372,14 +372,14 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
       <bpmn2:endEvent id="_E18E2728-8B04-469A-A61C-B7F474C2EB1D">
         <bpmn2:incoming>_55973008-A3D9-40D6-A72B-4DEF794A2B0B</bpmn2:incoming>
         <bpmn2:dataInput id="_E18E2728-8B04-469A-A61C-B7F474C2EB1D_throwErrorNameInputX" drools:dtype="String" itemSubjectRef="__E18E2728-8B04-469A-A61C-B7F474C2EB1D_throwErrorNameInputXItem" name="throwErrorName"/>
-        <bpmn2:dataInputAssociation id="_-hrAgTlWEeuBo5GRj4Huig">
+        <bpmn2:dataInputAssociation id="_EJ4mTjlXEeuBo5GRj4Huig">
           <bpmn2:sourceRef>errorThrow</bpmn2:sourceRef>
           <bpmn2:targetRef>_E18E2728-8B04-469A-A61C-B7F474C2EB1D_throwErrorNameInputX</bpmn2:targetRef>
         </bpmn2:dataInputAssociation>
-        <bpmn2:inputSet id="_-hrAgDlWEeuBo5GRj4Huig">
+        <bpmn2:inputSet id="_EJ4mTTlXEeuBo5GRj4Huig">
           <bpmn2:dataInputRefs>_E18E2728-8B04-469A-A61C-B7F474C2EB1D_throwErrorNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:errorEventDefinition id="_-hrAgjlWEeuBo5GRj4Huig" drools:erefname="ErrorName" errorRef="ErrorName"/>
+        <bpmn2:errorEventDefinition id="_EJ4mTzlXEeuBo5GRj4Huig" drools:erefname="ErrorName" errorRef="ErrorName"/>
       </bpmn2:endEvent>
       <bpmn2:startEvent id="_0E76F093-4945-4B88-8D11-BEEEAB94EAEE">
         <bpmn2:outgoing>_55973008-A3D9-40D6-A72B-4DEF794A2B0B</bpmn2:outgoing>
@@ -388,32 +388,32 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
     <bpmn2:boundaryEvent id="_037D167B-8E99-46E4-8DF2-107A01403AB7" drools:dockerinfo="44.8^74.0|" drools:boundaryca="true" attachedToRef="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF">
       <bpmn2:outgoing>_5C3CB8D9-8918-4EB8-A0DE-D23E7A21E4F6</bpmn2:outgoing>
       <bpmn2:dataOutput id="_037D167B-8E99-46E4-8DF2-107A01403AB7_timerDataOutputX" drools:dtype="Object" itemSubjectRef="__037D167B-8E99-46E4-8DF2-107A01403AB7_timerDataOutputXItem" name="timerData"/>
-      <bpmn2:dataOutputAssociation id="_-hrAhDlWEeuBo5GRj4Huig">
+      <bpmn2:dataOutputAssociation id="_EJ4mUTlXEeuBo5GRj4Huig">
         <bpmn2:sourceRef>_037D167B-8E99-46E4-8DF2-107A01403AB7_timerDataOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>timerData</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet id="_-hrAgzlWEeuBo5GRj4Huig">
+      <bpmn2:outputSet id="_EJ4mUDlXEeuBo5GRj4Huig">
         <bpmn2:dataOutputRefs>_037D167B-8E99-46E4-8DF2-107A01403AB7_timerDataOutputX</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:timerEventDefinition id="_-hrAhTlWEeuBo5GRj4Huig">
-        <bpmn2:timeDuration xsi:type="bpmn2:tFormalExpression" id="_-hrAhjlWEeuBo5GRj4Huig">PT3S</bpmn2:timeDuration>
+      <bpmn2:timerEventDefinition id="_EJ4mUjlXEeuBo5GRj4Huig">
+        <bpmn2:timeDuration xsi:type="bpmn2:tFormalExpression" id="_EJ4mUzlXEeuBo5GRj4Huig">PT3S</bpmn2:timeDuration>
       </bpmn2:timerEventDefinition>
     </bpmn2:boundaryEvent>
     <bpmn2:boundaryEvent id="_9AF90E62-4C0C-4D0D-ABCF-8CF194D12EE9" drools:dockerinfo="80.0^112.0|" drools:boundaryca="true" attachedToRef="_0C9ABA82-885B-4B24-B23C-EDD8441842B3">
       <bpmn2:outgoing>_50BFBC90-1138-4991-B14B-2211B7BB55B8</bpmn2:outgoing>
       <bpmn2:dataOutput id="_9AF90E62-4C0C-4D0D-ABCF-8CF194D12EE9_catchErrorStringOutputX" drools:dtype="String" itemSubjectRef="__9AF90E62-4C0C-4D0D-ABCF-8CF194D12EE9_catchErrorStringOutputXItem" name="catchErrorString"/>
-      <bpmn2:dataOutputAssociation id="_-hrAiDlWEeuBo5GRj4Huig">
+      <bpmn2:dataOutputAssociation id="_EJ4mVTlXEeuBo5GRj4Huig">
         <bpmn2:sourceRef>_9AF90E62-4C0C-4D0D-ABCF-8CF194D12EE9_catchErrorStringOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>errorCatch</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet id="_-hrAhzlWEeuBo5GRj4Huig">
+      <bpmn2:outputSet id="_EJ4mVDlXEeuBo5GRj4Huig">
         <bpmn2:dataOutputRefs>_9AF90E62-4C0C-4D0D-ABCF-8CF194D12EE9_catchErrorStringOutputX</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:errorEventDefinition id="_-hrAiTlWEeuBo5GRj4Huig" errorRef="_B18DFF73-FE57-4867-B3FB-3CFE0B131B87"/>
+      <bpmn2:errorEventDefinition id="_EJ4mVjlXEeuBo5GRj4Huig" errorRef="_E36267DB-933D-4D38-AC19-032F1EFC4FCE"/>
     </bpmn2:boundaryEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_-hrAijlWEeuBo5GRj4Huig">
-    <bpmndi:BPMNPlane id="_-hrAizlWEeuBo5GRj4Huig" bpmnElement="HelloProject.ThrowCatchEvents">
+  <bpmndi:BPMNDiagram id="_EJ4mVzlXEeuBo5GRj4Huig">
+    <bpmndi:BPMNPlane id="_EJ4mWDlXEeuBo5GRj4Huig" bpmnElement="HelloProject.ThrowCatchEvents">
       <bpmndi:BPMNShape id="shape__0C9ABA82-885B-4B24-B23C-EDD8441842B3" bpmnElement="_0C9ABA82-885B-4B24-B23C-EDD8441842B3" isExpanded="true">
         <dc:Bounds height="140.0" width="215.0" x="592.0" y="1003.0"/>
       </bpmndi:BPMNShape>
@@ -540,12 +540,12 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_-hrAjDlWEeuBo5GRj4Huig" type="BPSimData">
+  <bpmn2:relationship id="_EJ5NQDlXEeuBo5GRj4Huig" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF" id="_-hrAjTlWEeuBo5GRj4Huig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A64D3C81-8A4D-4895-8DC6-3F3EA677EFFF" id="_EJ5NQTlXEeuBo5GRj4Huig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -565,34 +565,14 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F56A084B-9669-455C-B600-130FFF1CB471" id="_-hrAjjlWEeuBo5GRj4Huig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F56A084B-9669-455C-B600-130FFF1CB471" id="_EJ5NQjlXEeuBo5GRj4Huig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9351F76B-FCC2-44BB-AA40-86570A53D50B" id="_-hrAjzlWEeuBo5GRj4Huig">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
-              <bpsim:Availability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:Availability>
-              <bpsim:Quantity xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:Quantity>
-            </bpsim:ResourceParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EC21BA94-B00C-456C-A5F7-3222E4358D8F" id="_-hrAkDlWEeuBo5GRj4Huig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9351F76B-FCC2-44BB-AA40-86570A53D50B" id="_EJ5NQzlXEeuBo5GRj4Huig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -612,7 +592,27 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_92C1554A-9255-4CAD-9572-6CB23E7961E3" id="_-hrAkTlWEeuBo5GRj4Huig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EC21BA94-B00C-456C-A5F7-3222E4358D8F" id="_EJ5NRDlXEeuBo5GRj4Huig">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_92C1554A-9255-4CAD-9572-6CB23E7961E3" id="_EJ5NRTlXEeuBo5GRj4Huig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -635,7 +635,7 @@ System.out.println(signalCatch.toString());]]></bpmn2:script>
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_-hqZcDlWEeuBo5GRj4Huig</bpmn2:source>
-    <bpmn2:target>_-hqZcDlWEeuBo5GRj4Huig</bpmn2:target>
+    <bpmn2:source>_EJ4mMDlXEeuBo5GRj4Huig</bpmn2:source>
+    <bpmn2:target>_EJ4mMDlXEeuBo5GRj4Huig</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>

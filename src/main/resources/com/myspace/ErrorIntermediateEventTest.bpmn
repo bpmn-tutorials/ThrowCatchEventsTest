@@ -448,14 +448,6 @@ System.out.println("");]]></bpmn2:script>
       </bpmn2:sequenceFlow>
       <bpmn2:endEvent id="_FFCD3F38-3421-4038-8861-A89B2AC94F3D">
         <bpmn2:incoming>_044085B0-FAEA-49B1-B1E6-2D7437F78354</bpmn2:incoming>
-        <bpmn2:dataInput id="_FFCD3F38-3421-4038-8861-A89B2AC94F3D_customDataInputX" drools:dtype="Object" itemSubjectRef="__FFCD3F38-3421-4038-8861-A89B2AC94F3D_customDataInputXItem" name="customData"/>
-        <bpmn2:dataInputAssociation id="_n1I8izp6EeuBLecwfu7FkQ">
-          <bpmn2:sourceRef>customData</bpmn2:sourceRef>
-          <bpmn2:targetRef>_FFCD3F38-3421-4038-8861-A89B2AC94F3D_customDataInputX</bpmn2:targetRef>
-        </bpmn2:dataInputAssociation>
-        <bpmn2:inputSet id="_n1I8ijp6EeuBLecwfu7FkQ">
-          <bpmn2:dataInputRefs>_FFCD3F38-3421-4038-8861-A89B2AC94F3D_customDataInputX</bpmn2:dataInputRefs>
-        </bpmn2:inputSet>
         <bpmn2:errorEventDefinition id="_n1I8jDp6EeuBLecwfu7FkQ" drools:erefname="customData" errorRef="customData"/>
       </bpmn2:endEvent>
       <bpmn2:startEvent id="_0AF690C0-325D-4DFB-81B0-D461B1CB2E02">
